@@ -1,0 +1,35 @@
+/* body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  } */
+  .wrapper.light {
+    background: #fff;
+    color: #000;
+    transition: background 0.5s, color 0.5s;
+  }
+  
+  .wrapper.dark {
+    background: #222;
+    color: #fff;
+    transition: background 0.5s, color 0.5s;
+  }
+  
+  /* 
+  
+  .navbar {
+    background: rgb(97, 96, 96);
+    transition: background 0.5s, color 0.5s;
+  }
+  
+  .wrapper.light .navbar {
+    background: #fff;
+    color: #000;
+  }
+  
+  .wrapper.dark .navbar {
+    background: #222;
+    color: #fff;
+  }
+  
+  */
+
