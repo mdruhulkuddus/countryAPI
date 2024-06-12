@@ -1,5 +1,8 @@
 import React from "react";
 import { Card, Button, Row, Col, CardGroup, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
+
 const Country = (props) => {
   const { country } = props;
   const { name, flags, capital, population, area } = country;
@@ -23,6 +26,8 @@ const Country = (props) => {
         <h6>Area: {area}</h6>
       </Card.Text>
       <Button variant="outline-success" className="m-2"> Details </Button>
+      {/* <Link to={`/blogs/${title}`} state={{id, title, body}} className="btn btn-primary">Learn More</Link> */}
+      <Link to={`/details/${name.common}`} className="btn btn-primary">Learn More</Link>
       <Button variant="outline-danger" onClick={()=>{
         handleRemoveCountry(name.common)
       }} > Remove </Button>
