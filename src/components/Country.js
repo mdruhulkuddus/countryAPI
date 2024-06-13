@@ -25,9 +25,9 @@ const Country = (props) => {
         <h6>Capital: {capital}</h6>
         <h6>Area: {area}</h6>
       </Card.Text>
-      <Button variant="outline-success" className="m-2"> Details </Button>
+      {/* <Button variant="outline-success" className="m-2"> Details </Button> */}
       {/* <Link to={`/blogs/${title}`} state={{id, title, body}} className="btn btn-primary">Learn More</Link> */}
-      <Link to={`/details/${name.common}`} className="btn btn-primary">Learn More</Link>
+      <Link to={`/details/${name.common}`} state={{country}} className="btn btn-outline-primary m-2">Details</Link>
       <Button variant="outline-danger" onClick={()=>{
         handleRemoveCountry(name.common)
       }} > Remove </Button>
