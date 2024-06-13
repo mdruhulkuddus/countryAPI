@@ -3,6 +3,7 @@ import Countries from "./Countries";
 import Search from "./Search";
 import "./Style.css";
 import Navbarr from "./Navbarr";
+import Loader from "./Loader";
 
 const url = `https://restcountries.com/v3.1/all`;
 
@@ -69,7 +70,7 @@ const Home = () => {
       {/* <h1>Courtrey app - {filteredCountries && filteredCountries.length}</h1> */}
    <Navbarr filteredCountries={filteredCountries} theme={theme} toggle_mode={toggle_mode} handleSearch={handleSearch}/>
 
-      {isLoading && <h2 className="text-center">Loading......</h2>}
+      {isLoading && <Loader />}
       {error && <h2 className="text-center">{error.message}</h2>}
       {countries && (
         <Countries
