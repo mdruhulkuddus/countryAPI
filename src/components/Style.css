@@ -6,12 +6,14 @@
     background: #fff;
     color: #000;
     transition: background 0.5s, color 0.5s;
+    height: 100vh;
   }
   
   .wrapper.dark {
     background: #222;
     color: #fff;
     transition: background 0.5s, color 0.5s;
+    height: 100vh;
   }
   
   /* 
