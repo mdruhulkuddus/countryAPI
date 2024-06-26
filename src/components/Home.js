@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Countries from "./Countries";
-import Search from "./Search";
 import "./Style.css";
 import Navbarr from "./Navbarr";
 import Loader from "./Loader";
+import Pagination from "./Pagination";
 
 const url = `https://restcountries.com/v3.1/all`;
 
@@ -51,7 +51,6 @@ const Home = () => {
     );
 
     setFilteredCountries(filtered);
-    //  setCountries(filtered)
   };
 
   const handleSearch = (searchValue) => {
@@ -62,19 +61,21 @@ const Home = () => {
       return countryName.startsWith(value);
     });
     setFilteredCountries(newCountries);
-    // setCountries(newCountries);
   };
 
   return (
     <div className={`wrapper ${theme}`}>
-      {/* <h1>Courtrey app - {filteredCountries && filteredCountries.length}</h1> */}
-   <Navbarr filteredCountries={filteredCountries} theme={theme} toggle_mode={toggle_mode} handleSearch={handleSearch}/>
+      <Navbarr
+        filteredCountries={filteredCountries}
+        theme={theme}
+        toggle_mode={toggle_mode}
+        handleSearch={handleSearch}
+      />
 
       {isLoading && <Loader />}
       {error && <h2 className="text-center">{error.message}</h2>}
       {countries && (
         <Countries
-          // countries={countries}
           countries={filteredCountries}
           onRemoveCounrty={handleRemoveCounntry}
         />

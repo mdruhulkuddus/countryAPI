@@ -10,8 +10,7 @@ import {
 import Navbarr from "./Navbarr";
 
 const Details = () => {
-
-    const current_theme = localStorage.getItem("current_theme");
+  const current_theme = localStorage.getItem("current_theme");
   const [theme, setTheme] = useState(current_theme ? current_theme : "light");
 
   useEffect(() => {
@@ -28,8 +27,8 @@ const Details = () => {
   const navigate = useNavigate();
   // console.log(country);
   return (
-    <div className={`wrapper ${theme}`} style={{height:"200vh"}}>
-      <Navbarr theme={theme}  toggle_mode={toggle_mode}/>
+    <div className={`wrapper ${theme}`} style={{ height: "200vh" }}>
+      <Navbarr theme={theme} toggle_mode={toggle_mode} />
       <div
         style={{ justifyContent: "center", marginTop: "50px", display: "flex" }}
       >
